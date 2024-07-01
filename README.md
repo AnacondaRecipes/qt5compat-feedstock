@@ -1,0 +1,1 @@
+# qt5compat-feedstock
