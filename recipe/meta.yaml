@@ -37,9 +37,6 @@ requirements:
     - qtdeclarative {{ version }}
     - qtshadertools {{ version }}
     - icu
-    # X11 dependencies
-    - libgl-devel  # [linux]
-    - libegl-devel  # [linux]
   run_constrained:
     - qt-main >={{ version }},<7
     - qt >={{ version }},<7
