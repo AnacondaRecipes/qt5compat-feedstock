@@ -33,10 +33,10 @@ requirements:
     - perl
 
   host:
-    - qtbase {{ version }}
+    - qtbase-devel {{ version }}
     - qtdeclarative {{ version }}
     - qtshadertools {{ version }}
-    - icu
+    - icu {{ icu }}
   run_constrained:
     - qt-main >={{ version }},<7
     - qt >={{ version }},<7
