@@ -21,14 +21,14 @@ requirements:
     - {{ stdlib('c') }}
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
-    - pkg-config  # [unix]
-    - bison       # [linux]
-    - flex        # [linux]
-    - gperf       # [linux]
-    - jom         # [win]
-    - m2-bison    # [win]
-    - m2-flex     # [win]
-    - m2-gperf    # [win]
+    - pkg-config     # [unix]
+    - bison          # [linux]
+    - flex           # [linux]
+    - gperf          # [linux]
+    - jom            # [win]
+    - msys2-bison    # [win]
+    - msys2-flex     # [win]
+    - msys2-gperf    # [win]
     - cmake
     - ninja
     - perl
