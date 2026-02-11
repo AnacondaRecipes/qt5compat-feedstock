@@ -1,5 +1,5 @@
 {% set name = "qt5compat" %}
-{% set version = "6.9.2" %}
+{% set version = "6.10.1" %}
 
 package:
   name: {{ name }}
@@ -7,11 +7,11 @@ package:
 
 source:
   - url: https://download.qt.io/official_releases/qt/{{ version.rpartition('.')[0] }}/{{ version }}/submodules/{{ name }}-everywhere-src-{{ version }}.tar.xz
-    sha256: cb289905c689fc271ce783f8b67844040aa73d78f4f0cf8421fa713390a75b60
+    sha256: 72396d160a153dee01b41cf0cae9ad46204cf613adb791b3ee85a7efeadffe24
     folder: {{ name }}
 
 build:
-  number: 1
+  number: 0
   # https://doc.qt.io/qt-6/qt-releases.html#binary-compatibility
   run_exports:
     - {{ pin_subpackage(name, max_pin='x.x') }}
@@ -30,7 +30,7 @@ requirements:
     - msys2-flex     # [win]
     - msys2-gperf    # [win]
     - cmake
-    - ninja
+    - ninja-base
     - perl
   host:
     - qtbase-devel {{ version }}
@@ -44,8 +44,8 @@ test:
     - {{ stdlib('c') }}  # [linux]
     - {{ compiler('cxx') }}
     - cmake
-    - ninja
-    - qtbase-devel
+    - ninja-base
+    - qtbase-devel {{ version }}
   files:
     - run_qt_test.sh    # [unix]
     - run_qt_test.bat   # [win]
