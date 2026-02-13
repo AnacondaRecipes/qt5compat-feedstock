@@ -1,5 +1,5 @@
 {% set name = "qt5compat" %}
-{% set version = "6.10.1" %}
+{% set version = "6.10.2" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   - url: https://download.qt.io/official_releases/qt/{{ version.rpartition('.')[0] }}/{{ version }}/submodules/{{ name }}-everywhere-src-{{ version }}.tar.xz
-    sha256: 72396d160a153dee01b41cf0cae9ad46204cf613adb791b3ee85a7efeadffe24
+    sha256: 3fa418f0fac02eb9efc5f762fbe25f20647b0ebb7fa92faf07e6de85044161c2
     folder: {{ name }}
 
 build:
