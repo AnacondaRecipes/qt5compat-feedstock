@@ -1,5 +1,5 @@
 {% set name = "qt5compat" %}
-{% set version = "6.10.2" %}
+{% set version = "6.11.0" %}
 
 package:
   name: {{ name }}
@@ -35,7 +35,7 @@ requirements:
   host:
     - qtbase-devel {{ version }}
     - qtdeclarative {{ version }}
-    # https://github.com/qt/qt5compat/blob/v6.9.2/CMakeLists.txt#L24
+    # https://github.com/qt/qt5compat/blob/v6.11.0/CMakeLists.txt#L28
     - qtshadertools {{ version }}
     - icu {{ icu }}
 
@@ -63,7 +63,7 @@ test:
     {% endfor %}
 
 about:
-  home: https://www.qt.io/
+  home: https://www.qt.io
   license: LGPL-3.0-only
   license_file: {{ name }}/LICENSES/LGPL-3.0-only.txt
   license_family: LGPL
@@ -71,5 +71,5 @@ about:
   description: |
     Qt helps you create connected devices, UIs & applications that run
     anywhere on any device, on any operating system at any time ({{ name[2:] }} libraries).
-  doc_url: https://doc.qt.io/
+  doc_url: https://doc.qt.io
   dev_url: https://github.com/qt/{{ name }}
